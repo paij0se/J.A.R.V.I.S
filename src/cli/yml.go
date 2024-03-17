@@ -13,12 +13,6 @@ var defaultConfigYml = map[string]string{
 	"voiceId": "Lupe",
 }
 
-/*
-Pedro: Spanish, US
-Lupe: Spanish, US
-Mia: Spanish, MX
-Andres: Spanish, MX
-*/
 var configFolderName = "/jarvis/"
 var configFileName = "jarvis.yml"
 

@@ -36,7 +36,7 @@ func main() {
 		output, err := cmd.Output()
 
 		if err != nil {
-			fmt.Println("Error al ejecutar el comando:", err)
+			fmt.Println("Error", err)
 			return
 		}
 		fmt.Println(string(output))

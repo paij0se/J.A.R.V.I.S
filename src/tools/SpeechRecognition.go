@@ -10,7 +10,15 @@ import (
 	"time"
 )
 
+func createOutputFolder() {
+	_, err := os.Stat("output")
+	if os.IsNotExist(err) {
+		os.Mkdir("output", 0755)
+	}
+}
+
 func SpeechToText(filename string) string {
+	createOutputFolder()
 	// print it in purple
 	fmt.Println("\033[35m", "[+]", "\033[0m", "Converting to text")
 	cmd := "whisper " + filename + " --language Spanish --output_dir output"

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"os/exec"
 	"strings"
 	"time"
 
@@ -12,8 +13,16 @@ import (
 	"github.com/aws/aws-sdk-go/service/polly"
 )
 
-func TTS(text string, voice string) string {
+func checkAWSIsInstalled() {
+	_, err := exec.LookPath("aws")
+	if err != nil {
+		fmt.Println("AWS CLI is not installed. Please install it and try again.")
+		os.Exit(1)
+	}
+}
 
+func TTS(text string, voice string) string {
+	checkAWSIsInstalled()
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
 		SharedConfigState: session.SharedConfigEnable,
 	}))
