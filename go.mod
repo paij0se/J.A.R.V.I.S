@@ -3,14 +3,21 @@ module github.com/drpaij0se/gufipufi
 go 1.22.0
 
 require (
+	github.com/MarkKremer/microphone v1.2.0
+	github.com/adhocore/chin v1.1.0
+	github.com/aws/aws-sdk-go v1.51.1
+	github.com/gopxl/beep v1.4.0
+	github.com/hajimehoshi/go-mp3 v0.3.4
+	github.com/hajimehoshi/oto v1.0.1
+	gopkg.in/yaml.v3 v3.0.1
+)
+
+require (
 	cloud.google.com/go v0.112.0 // indirect
 	cloud.google.com/go/compute v1.24.0 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/longrunning v0.5.5 // indirect
 	cloud.google.com/go/texttospeech v1.7.6 // indirect
-	github.com/MarkKremer/microphone v1.2.0 // indirect
-	github.com/adhocore/chin v1.1.0 // indirect
-	github.com/aws/aws-sdk-go v1.51.1 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
@@ -19,10 +26,7 @@ require (
 	github.com/google/s2a-go v0.1.7 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.2 // indirect
 	github.com/googleapis/gax-go/v2 v2.12.2 // indirect
-	github.com/gopxl/beep v1.4.0 // indirect
 	github.com/gordonklaus/portaudio v0.0.0-20230709114228-aafa478834f5 // indirect
-	github.com/hajimehoshi/go-mp3 v0.3.4 // indirect
-	github.com/hajimehoshi/oto v1.0.1 // indirect
 	github.com/hajimehoshi/oto/v2 v2.3.1 // indirect
 	github.com/hegedustibor/htgo-tts v0.0.0-20230402053941-cd8d1a158135 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
@@ -54,5 +58,4 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240304161311-37d4d3c04a78 // indirect
 	google.golang.org/grpc v1.62.1 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

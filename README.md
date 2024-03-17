@@ -1,5 +1,7 @@
 <h1>J.A.R.V.I.S</h1>
 
+
+<h1>Installation</h1>
 <h2>Step 1:</h2>
 
 Download [Whisper](https://github.com/openai/whisper#setup)
@@ -34,3 +36,12 @@ Downnload J.A.R.V.I.S.
 $ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh
 ```
 
+<h1>Configuration</h1>
+
+- The configuration file is located in: `$HOME/.config/jarvis/jarvis.yml`
+
+```sh
+auth: sk-****
+model: gpt-3.5-turbo
+voiceId: "Lupe"
+```

@@ -26,7 +26,7 @@ func checkIfWhisperIsInstalled() {
 func SpeechToText(filename string) string {
 	createOutputFolder()
 	checkIfWhisperIsInstalled()
-	// print it in purple
+	// TODO: put the language as a parameter in the config file
 	fmt.Println("\033[35m", "[+]", "\033[0m", "Converting to text")
 	cmd := "whisper " + filename + " --language Spanish --output_dir output"
 	// make a timer to see how long it takes to convert the audio to text
