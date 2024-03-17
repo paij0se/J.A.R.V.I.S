@@ -4,5 +4,5 @@ cd J.A.R.V.I.S.
 echo "Installing"
 go get .
 echo "compiling"
-go build mani.go
+go build main.go
 echo "Done!"
