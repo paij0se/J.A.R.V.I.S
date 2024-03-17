@@ -8,9 +8,11 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+// Default	config
 var defaultConfigYml = map[string]string{
-	"model":   "gpt-3.5-turbo",
-	"voiceId": "Lupe",
+	"model":    "gpt-3.5-turbo",
+	"voiceId":  "Joanna",
+	"language": "English",
 }
 
 var configFolderName = "/jarvis/"
@@ -39,6 +41,16 @@ func CreateConfigDirectory() error {
 	var token string
 	if token, err = tokenRequest(); err != nil {
 		return err
+	}
+	var language string
+	if language, err = languageRequest(); err != nil {
+		return err
+	}
+	defaultConfigYml["language"] = language
+	if defaultConfigYml["language"] == "Spanish" {
+		defaultConfigYml["voiceId"] = "Lupe"
+	} else {
+		defaultConfigYml["voiceId"] = "Joanna"
 	}
 	defaultConfigYml["auth"] = token
 
@@ -76,10 +88,21 @@ var errTokenLenNotValid = errors.New("the token len is not valid")
 
 func tokenRequest() (string, error) {
 	var token string
-	fmt.Print("Please write your token: ")
+	fmt.Print("Please write your OpenAI token: ")
 	fmt.Scanln(&token)
 	if len(token) == 0 {
 		return token, errTokenLenNotValid
 	}
 	return token, nil
+}
+
+func languageRequest() (string, error) {
+	var language string
+	fmt.Print("Please write the language (English or Spanish): ")
+	fmt.Scanln(&language)
+	if language != "English" && language != "Spanish" {
+		return language, errors.New("the language is not valid")
+	} else {
+		return language, nil
+	}
 }

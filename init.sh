@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Downloading"
 git clone https://github.com/drpaij0se/J.A.R.V.I.S.
 cd J.A.R.V.I.S.

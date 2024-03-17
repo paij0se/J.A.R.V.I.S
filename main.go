@@ -27,7 +27,7 @@ func main() {
 	filename := tools.RecordAudio()
 	s := chin.New()
 	go s.Start()
-	texto := tools.SpeechToText(filename)
+	texto := tools.SpeechToText(filename, config["language"])
 	s.Stop()
 	tools.SendTextToOPenAI(texto, config["model"], config["auth"])
 	filesToDelete := []string{"*.mp3", "*.wav"}
