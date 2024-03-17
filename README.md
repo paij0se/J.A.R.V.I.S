@@ -33,7 +33,7 @@ Downnload J.A.R.V.I.S.
 
 ```sh
 
-$ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh
+$ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh ; bash init.sh
 ```
 
 <h1>Configuration</h1>
