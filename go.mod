@@ -1,4 +1,4 @@
-module github.com/drpaij0se/gufipufi
+module github.com/drpaij0se/J.A.R.V.I.S
 
 go 1.22.0
 

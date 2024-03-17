@@ -6,8 +6,8 @@ import (
 	"os/exec"
 
 	"github.com/adhocore/chin"
-	"github.com/drpaij0se/gufipufi/src/cli"
-	"github.com/drpaij0se/gufipufi/src/tools"
+	"github.com/drpaij0se/J.A.R.V.I.S/src/cli"
+	"github.com/drpaij0se/J.A.R.V.I.S/src/tools"
 )
 
 func main() {
