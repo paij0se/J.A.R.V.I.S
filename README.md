@@ -21,4 +21,16 @@ Default region name [None]: us-west-2
 Default output format [None]: json
 ```
 
+<h2>Step 4:</h2>
+
+Create an OpenAI [AUTH Token](https://platform.openai.com/api-keys)
+
+<h2>Step 5:</h2>
+
+Downnload J.A.R.V.I.S.
+
+```sh
+
+$ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh
+```
 

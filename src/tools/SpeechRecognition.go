@@ -16,9 +16,16 @@ func createOutputFolder() {
 		os.Mkdir("output", 0755)
 	}
 }
-
+func checkIfWhisperIsInstalled() {
+	_, err := exec.LookPath("whisper")
+	if err != nil {
+		fmt.Println("Whisper is not installed. Please install it and try again.")
+		os.Exit(1)
+	}
+}
 func SpeechToText(filename string) string {
 	createOutputFolder()
+	checkIfWhisperIsInstalled()
 	// print it in purple
 	fmt.Println("\033[35m", "[+]", "\033[0m", "Converting to text")
 	cmd := "whisper " + filename + " --language Spanish --output_dir output"
