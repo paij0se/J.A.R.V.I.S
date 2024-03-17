@@ -9,12 +9,18 @@ import (
 )
 
 var defaultConfigYml = map[string]string{
-	"model":      "gpt-3.5-turbo",
-	"max_tokens": "256",
+	"model":   "gpt-3.5-turbo",
+	"voiceId": "Lupe",
 }
 
-var configFolderName = "/gufipufi/"
-var configFileName = "gufipufi.yml"
+/*
+Pedro: Spanish, US
+Lupe: Spanish, US
+Mia: Spanish, MX
+Andres: Spanish, MX
+*/
+var configFolderName = "/jarvis/"
+var configFileName = "jarvis.yml"
 
 func getConfigDir() (string, error) {
 	var userConfigDir, err = os.UserConfigDir()
