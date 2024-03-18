@@ -40,8 +40,9 @@ $ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh ; b
 
 - The configuration file is located in: `$HOME/.config/jarvis/jarvis.yml`
 
-```sh
-auth: sk-****
+```yml
+auth: sk-**** # OpenAI Key
+language: Spanish 
 model: gpt-3.5-turbo
-voiceId: "Lupe"
+voiceId: Lupe
 ```
