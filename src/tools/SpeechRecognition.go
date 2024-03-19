@@ -28,7 +28,7 @@ func SpeechToText(filename string, language string) string {
 	checkIfWhisperIsInstalled()
 	// TODO: put the language as a parameter in the config file
 	fmt.Println("\033[35m", "[+]", "\033[0m", "Converting to text")
-	cmd := "whisper " + filename + " --language " + language + " --output_dir output --model tiny"
+	cmd := "whisper " + filename + " --language " + language + " --output_dir output"
 	// make a timer to see how long it takes to convert the audio to text
 	timer := time.Now()
 
