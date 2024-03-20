@@ -32,7 +32,7 @@ func main() {
 	tools.SendTextToOPenAI(texto, config["model"], config["auth"])
 	filesToDelete := []string{"*.mp3", "*.wav"}
 	for _, file := range filesToDelete {
-		cmd := exec.Command("sh", "-c", "rm "+file)
+		cmd := exec.Command("sh", "-c", "mv "+file, " output")
 		output, err := cmd.Output()
 
 		if err != nil {

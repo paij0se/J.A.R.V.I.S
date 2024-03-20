@@ -21,3 +21,10 @@ func TestOpenAI(t *testing.T) {
 
 	tools.SendTextToOPenAI("el rap esta en contra del racismo?", "gpt-3.5-turbo", config["auth"])
 }
+
+func TestMicrophone(t *testing.T) {
+	filename := tools.RecordAudio()
+	if filename == "" {
+		t.Error("Error al grabar el audio")
+	}
+}

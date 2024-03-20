@@ -36,6 +36,38 @@ Downnload J.A.R.V.I.S.
 $ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh ; bash init.sh
 ```
 
+<h1>Installation with Docker</h1>
+
+<h2>Step 1:</h2>
+Clone the repository
+
+```sh
+git clone https://github.com/drpaij0se/J.A.R.V.I.S ; cd J.A.R.V.I.S/ 
+```
+
+<h2>Step 2:</h2>
+Configure the Dockerfile with your credentials
+
+```Dockerfile
+RUN aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+RUN aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+RUN aws configure set default.region $AWS_DEFAULT_REGION
+```
+
+<h2>Step 3:</h2>
+Build the image
+
+```sh
+docker build --tag jarvis . 
+```
+
+<h2>Step 4:</h2>
+Run the container
+
+```sh
+docker run -ti --rm --device /dev/snd:/dev/snd jarvis  
+```
+
 <h1>Configuration</h1>
 
 - The configuration file is located in: `$HOME/.config/jarvis/jarvis.yml`

@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Downloading"
+sudo apt-get install portaudio19-dev
 git clone https://github.com/drpaij0se/J.A.R.V.I.S.
 cd "J.A.R.V.I.S."
 echo "Installing"
