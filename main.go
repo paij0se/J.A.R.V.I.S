@@ -24,6 +24,7 @@ func main() {
 	if len(config["auth"]) < 51 {
 		log.Fatal("Ensure to insert a valid token in cligpt.yml file.")
 	}
+
 	filename := tools.RecordAudio()
 	s := chin.New()
 	go s.Start()

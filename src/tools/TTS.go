@@ -26,6 +26,10 @@ func TTS(text string, voice string) string {
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
 		SharedConfigState: session.SharedConfigEnable,
 	}))
+	// check the text if its a code block: ```python`
+	if strings.Contains(text, "```") {
+		text = ""
+	}
 	svc := polly.New(sess)
 	input := &polly.SynthesizeSpeechInput{OutputFormat: aws.String("mp3"), Text: &text, VoiceId: aws.String(voice)}
 	output, err := svc.SynthesizeSpeech(input)
