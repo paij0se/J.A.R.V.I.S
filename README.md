@@ -48,6 +48,13 @@ git clone https://github.com/drpaij0se/J.A.R.V.I.S ; cd J.A.R.V.I.S/
 <h2>Step 2:</h2>
 Configure the Dockerfile with your credentials
 
+<h2>⚠️Warning⚠️</h2>  
+
+
+Create an [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)   user for the access key, DO NOT USE root keys
+
+
+
 ```Dockerfile
 RUN aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 RUN aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
