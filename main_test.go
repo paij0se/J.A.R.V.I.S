@@ -28,3 +28,12 @@ func TestMicrophone(t *testing.T) {
 		t.Error("Error al grabar el audio")
 	}
 }
+
+func TestTTS(t *testing.T) {
+	text := `
+Hello, This is a test
+
+`
+	filename := tools.TTS(text, "Lupe")
+	tools.PlayAudio(filename)
+}

@@ -26,9 +26,8 @@ func TTS(text string, voice string) string {
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
 		SharedConfigState: session.SharedConfigEnable,
 	}))
-	// check the text if its a code block: ```python`
 	if strings.Contains(text, "```") {
-		text = ""
+		text = "Sure!"
 	}
 	svc := polly.New(sess)
 	input := &polly.SynthesizeSpeechInput{OutputFormat: aws.String("mp3"), Text: &text, VoiceId: aws.String(voice)}
@@ -50,10 +49,18 @@ func TTS(text string, voice string) string {
 		os.Exit(1)
 	}
 	defer outFile.Close()
+
 	_, err = io.Copy(outFile, output.AudioStream)
 	if err != nil {
 		fmt.Println("Got error saving MP3:")
 		fmt.Print(err.Error())
+		os.Exit(1)
+	}
+	// move all the trash to output folder
+	renameErr := os.Rename(mp3File, "output/"+mp3File)
+	if renameErr != nil {
+		fmt.Println("Got error renaming file:")
+		fmt.Print(renameErr.Error())
 		os.Exit(1)
 	}
 	return mp3File

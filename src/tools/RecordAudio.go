@@ -65,5 +65,10 @@ func RecordAudio() string {
 	f.Close()
 	time.Sleep(1 * time.Second)
 	clearTerminal()
+	// move the file to the output folder
+	newFilename := "output/" + filename
+	if err := os.Rename(filename, newFilename); err != nil {
+		log.Fatal(err)
+	}
 	return filename
 }

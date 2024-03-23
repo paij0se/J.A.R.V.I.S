@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os/exec"
 
 	"github.com/adhocore/chin"
 	"github.com/drpaij0se/J.A.R.V.I.S/src/cli"
@@ -31,16 +29,4 @@ func main() {
 	texto := tools.SpeechToText(filename, config["language"])
 	s.Stop()
 	tools.SendTextToOPenAI(texto, config["model"], config["auth"])
-	filesToDelete := []string{"*.mp3", "*.wav"}
-	for _, file := range filesToDelete {
-		cmd := exec.Command("sh", "-c", "mv "+file, " output")
-		output, err := cmd.Output()
-
-		if err != nil {
-			fmt.Println("Error", err)
-			return
-		}
-		fmt.Println(string(output))
-	}
-
 }

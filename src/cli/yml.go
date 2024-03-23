@@ -22,8 +22,14 @@ func getConfigDir() (string, error) {
 	var userConfigDir, err = os.UserConfigDir()
 	return userConfigDir + configFolderName, err
 }
-
+func createOutputFolder() {
+	_, err := os.Stat("output")
+	if os.IsNotExist(err) {
+		os.Mkdir("output", 0755)
+	}
+}
 func CreateConfigDirectory() error {
+	createOutputFolder()
 	var err error
 	var cligptConfigDir string
 	if cligptConfigDir, err = getConfigDir(); err != nil {

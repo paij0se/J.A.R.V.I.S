@@ -61,7 +61,7 @@ func SendTextToOPenAI(text string, model string, auth string) {
 	if config, err = cli.ReadYml(); err != nil {
 		log.Fatal(err)
 	}
-	if err := PlayAudio(TTS(r, config["voiceId"])); err != nil {
+	if err := PlayAudio("output/" + TTS(r, config["voiceId"])); err != nil {
 		log.Fatal(err)
 	}
 }
