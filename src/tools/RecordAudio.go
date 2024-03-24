@@ -63,7 +63,7 @@ func RecordAudio() string {
 		log.Fatal(err)
 	}
 	f.Close()
-	time.Sleep(1 * time.Second)
+	time.Sleep(1500 * time.Millisecond)
 	clearTerminal()
 	if err := os.Rename(filename, "output/"+filename); err != nil {
 		log.Fatal(err)

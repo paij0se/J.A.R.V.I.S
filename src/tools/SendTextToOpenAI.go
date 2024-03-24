@@ -50,7 +50,6 @@ func SendTextToOPenAI(text string, model string, auth string) {
 		log.Println(err)
 	}
 	r := response.Choices[0].Message.Content
-	// print in in green
 	fmt.Println("\033[32m", r, "\033[0m")
 	// play the audio
 	var config map[string]string
