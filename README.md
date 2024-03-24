@@ -33,7 +33,7 @@ Downnload J.A.R.V.I.S.
 
 ```sh
 
-$ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh ; bash init.sh
+$ wget https://raw.githubusercontent.com/paij0se/J.A.R.V.I.S./main/init.sh ; bash init.sh
 ```
 
 <h1>Installation with Docker</h1>
@@ -42,7 +42,7 @@ $ wget https://raw.githubusercontent.com/drpaij0se/J.A.R.V.I.S./main/init.sh ; b
 Clone the repository
 
 ```sh
-git clone https://github.com/drpaij0se/J.A.R.V.I.S ; cd J.A.R.V.I.S/ 
+git clone https://github.com/paij0se/J.A.R.V.I.S ; cd J.A.R.V.I.S/ 
 ```
 
 <h2>Step 2:</h2>

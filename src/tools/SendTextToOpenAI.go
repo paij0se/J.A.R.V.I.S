@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/drpaij0se/J.A.R.V.I.S/src/cli"
+	"github.com/paij0se/J.A.R.V.I.S/src/cli"
 )
 
 type Data struct {

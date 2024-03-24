@@ -4,8 +4,8 @@ import (
 	"log"
 	"testing"
 
-	"github.com/drpaij0se/J.A.R.V.I.S/src/cli"
-	"github.com/drpaij0se/J.A.R.V.I.S/src/tools"
+	"github.com/paij0se/J.A.R.V.I.S/src/cli"
+	"github.com/paij0se/J.A.R.V.I.S/src/tools"
 )
 
 func TestOpenAI(t *testing.T) {
